@@ -18,6 +18,7 @@ public class Server {
                 System.out.println("Connected to "+acceptedConnection.getRemoteSocketAddress());
                 PrintWriter toClient = new PrintWriter(acceptedConnection.getOutputStream(), true);
                 BufferedReader fromClient = new BufferedReader(new InputStreamReader(acceptedConnection.getInputStream()));
+                
                 toClient.println("Hello World from the server");
             }
         } catch(Exception ex) {
